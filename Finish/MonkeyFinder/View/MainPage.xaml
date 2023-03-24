@@ -23,16 +23,6 @@
                 <CollectionView
                         ItemsSource="{Binding Monkeys}"
                         SelectionMode="None">
-                    <CollectionView.EmptyView>
-                        <StackLayout Padding="100">
-                            <Image
-                                    HorizontalOptions="Center"
-                                    HeightRequest="160"
-                                    WidthRequest="160"
-                                    Source="nodata.png"
-                                    VerticalOptions="Center" />
-                        </StackLayout>
-                    </CollectionView.EmptyView>
                     <!--<CollectionView.ItemsLayout>
                             <GridItemsLayout  Orientation="Horizontal" Span="3"/>
                         </CollectionView.ItemsLayout>-->
@@ -55,8 +45,8 @@
                                                 VerticalOptions="Center"
                                                 Grid.Column="1"
                                                 Padding="10">
-                                            <Label Style="{StaticResource LargeLabel}" Text="{Binding Name}" />
-                                            <Label Style="{StaticResource MediumLabel}" Text="{Binding Location}" />
+                                            <Label Style="{StaticResource LargeLabel}" Text="{Binding Date}" />
+                                            <Label Style="{StaticResource MediumLabel}" Text="{Binding Category2}" />
                                         </VerticalStackLayout>
                                     </Grid>
                                 </Frame>
