@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:viewmodel="clr-namespace:MonkeyFinder.ViewModel"
-    Title="{Binding Monkey.Name}"
+    Title="{Binding Monkey.Date}"
     x:DataType="viewmodel:MonkeyDetailsViewModel">
     <ScrollView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
         <Grid RowDefinitions="Auto,Auto,*">
@@ -22,12 +22,6 @@
                     Margin="0,8,0,0"
                     HorizontalOptions="Center"
                     VerticalOptions="Center">
-                    <Image Aspect="AspectFill"
-                        HeightRequest="160"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        Source="{Binding Monkey.Image}"
-                        WidthRequest="160"/>
             </Border>
 
             <Label Style="{StaticResource LargeLabel}" 
@@ -47,9 +41,8 @@
                         Margin="8"
                         Style="{StaticResource ButtonOutline}"/>
 
-                <Label Style="{StaticResource MediumLabel}" Text="{Binding Monkey.Details}" />
-                <Label Style="{StaticResource SmallLabel}" Text="{Binding Monkey.Location, StringFormat='Location: {0}'}" />
-                <Label Style="{StaticResource SmallLabel}" Text="{Binding Monkey.Population, StringFormat='Population: {0}'}" />
+                <Label Style="{StaticResource MediumLabel}" Text="{Binding Monkey.Description}" />
+                <Label Style="{StaticResource SmallLabel}" Text="{Binding Monkey.Category2, StringFormat='Location: {0}'}" />
             </VerticalStackLayout>
         </Grid>
     </ScrollView>
